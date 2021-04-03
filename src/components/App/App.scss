@@ -1,53 +1,36 @@
+@import '../../styles/index.scss';
+
 .App {
   background: #c2c2c2;
-  border-bottom-color: #999;
-  border-left-color: #fff;
-  border-right-color: #999;
-  border-top-color: #fff;
-  border-style: solid;
-  border-width: 4px;
+  @include borders(#fff, #999);
   padding: 16px
 }
 
 .Header {
+  justify-content: space-between;
   align-items: center;
   background: #c0c0c0;
-  border-bottom-color: #fff;
-  border-left-color: #7b7b7b;
-  border-right-color: #fff;
-  border-top-color: #7b7b7b;
-  border-style: solid;
-  border-width: 4px;
   display: flex;
-  justify-content: space-between;
+  @include borders(#7b7b7b, #fff);
+  
   padding: 10px 12px
 }
 
 .Body {
-  border-bottom-color: #fff;
-  border-left-color: #7b7b7b;
-  border-right-color: #fff;
-  border-top-color: #7b7b7b;
-  border-style: solid;
-  border-width: 4px;
-  margin-top: 16px;
   display: grid;
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
-  grid-template-columns: repeat(9, 1fr)
+  @include borders(#7b7b7b, #fff);
+  margin-top: 16px;
 }
 
 .Face {
   align-items: center;
-  border-bottom-color: #7b7b7b;
-  border-left-color: #fff;
-  border-right-color: #7b7b7b;
-  border-top-color: #fff;
-  border-style: solid;
-  border-width: 4px;
   cursor: pointer;
   display: flex;
   font-size: 32px;
   height: 52px;
+  @include borders;
   justify-content: center;
   width: 52px
 }
