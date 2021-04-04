@@ -31,6 +31,7 @@
   font-size: 32px;
   height: 52px;
   @include borders;
+  @include buttons;
   justify-content: center;
   width: 52px
 }
